@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveau message - Vitrine Culture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #CD6155, #E74C3C);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .content {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 0 0 8px 8px;
+        }
+        .field {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: white;
+            border-left: 4px solid #CD6155;
+            border-radius: 4px;
+        }
+        .field-label {
+            font-weight: bold;
+            color: #CD6155;
+            margin-bottom: 5px;
+        }
+        .message-content {
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            border-left: 4px solid #E74C3C;
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #CD6155;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        .badge {
+            display: inline-block;
+            background: #D68910;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎭 Vitrine Culture</h1>
+        <p>Nouveau message reçu</p>
+    </div>
+    
+    <div class="content">
+        <p>Bonjour,</p>
+        <p>Vous avez reçu un nouveau message via le formulaire de contact du site Vitrine Culture.</p>
+        
+        <div class="field">
+            <div class="field-label">👤 Nom complet</div>
+            <div>{{from_name}}</div>
+        </div>
+        
+        <div class="field">
+            <div class="field-label">📧 Email</div>
+            <div>{{from_email}}</div>
+        </div>
+        
+        <div class="field">
+            <div class="field-label">📱 Téléphone</div>
+            <div>{{phone}}</div>
+        </div>
+        
+        <div class="field">
+            <div class="field-label">📋 Type de demande</div>
+            <div>{{type}}</div>
+            <div class="badge">{{type}}</div>
+        </div>
+        
+        <div class="field">
+            <div class="field-label">📝 Sujet</div>
+            <div><strong>{{subject}}</strong></div>
+        </div>
+        
+        <div class="message-content">
+            <div class="field-label">💬 Message</div>
+            <div>{{message}}</div>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 15px; background: #E8F5E8; border-radius: 4px;">
+            <strong>💡 Action recommandée :</strong><br>
+            Répondez directement à cet email ou contactez {{from_name}} à l'adresse : 
+            <a href="mailto:{{reply_to}}" style="color: #CD6155;">{{reply_to}}</a>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>
+            📍 Cet email a été envoyé depuis le site web de Vitrine Culture<br>
+            🌐 <a href="https://vitrineculture.sn" style="color: #CD6155;">vitrineculture.sn</a><br>
+            📧 contact@vitrineculture.sn<br>
+            📱 +221 XX XXX XX XX
+        </p>
+        <p>
+            <em>Saint-Louis, Sénégal - Valorisation de la culture sénégalaise</em>
+        </p>
+    </div>
+</body>
+</html>
